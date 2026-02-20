@@ -1,4 +1,4 @@
-.container {
+/* .container {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -97,4 +97,193 @@
 @keyframes spin { to { transform: rotate(360deg); } }
 .switch { text-align: center; color: var(--text2); font-size: 0.875rem; margin-top: 1.5rem; }
 .switch a { color: var(--accent2); text-decoration: none; font-weight: 500; }
+.switch a:hover { text-decoration: underline; } */
+
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    padding: 2rem;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background: #4f46e5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #111;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.steps {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.step {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #999;
+}
+
+.step.active {
+    border-color: #4f46e5;
+    background: #4f46e5;
+    color: white;
+}
+
+.stepLine {
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.field label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #444;
+}
+
+.field input,
+.select {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.9rem;
+    outline: none;
+    width: 100%;
+    background: white;
+    color: #333;
+}
+
+.field input:focus,
+.select:focus {
+    border-color: #4f46e5;
+}
+
+.btn {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+}
+
+.btn:hover { background: #4338ca; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btnGhost {
+    background: white;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.65rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btnGhost:hover { background: #f5f5f5; }
+
+.error {
+    color: #dc2626;
+    font-size: 0.85rem;
+    background: #fef2f2;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #fecaca;
+}
+
+.successMsg {
+    color: #16a34a;
+    font-size: 0.85rem;
+    background: #f0fdf4;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #bbf7d0;
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.switch {
+    text-align: center;
+    color: #666;
+    font-size: 0.875rem;
+    margin-top: 1.25rem;
+}
+
+.switch a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
 .switch a:hover { text-decoration: underline; }

@@ -17,7 +17,8 @@ export default function Login() {
         setLoading(true);
         try {
             await login({ email, password });
-            navigate('/chat');
+            //navigate('/chat');
+            navigate('/dashboard'); 
         } catch (err) {
             setError(err.response?.data?.message || 'Login failed');
         } finally {
@@ -34,7 +35,7 @@ export default function Login() {
             <div className={`${styles.card} animate-in`}>
                 <div className={styles.logo}>CC</div>
                 <h1 className={styles.title}>Welcome back</h1>
-                <p className={styles.subtitle}>Sign in to CreatorConnect</p>
+                <p className={styles.subtitle}>Sign in to Creator Connect</p>
 
                 <form onSubmit={handleSubmit} className={styles.form}>
                     <div className={styles.field}>

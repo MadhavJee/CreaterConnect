@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import Login from './pages/login';
+import Login from './pages/Login';
 import Signup from './pages/Signup';
-import Chat from './pages/Chat';
+import Dashboard from './pages/dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 
 export default function App() {
@@ -13,9 +13,9 @@ export default function App() {
                     <Route path="/" element={<Navigate to="/login" replace />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
-                    <Route path="/chat" element={
+                    <Route path="/dashboard" element={
                         <ProtectedRoute>
-                            <Chat />
+                            <Dashboard />
                         </ProtectedRoute>
                     } />
                 </Routes>
